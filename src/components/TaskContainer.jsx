@@ -1,4 +1,3 @@
-import React from "react";
 import { tasks } from "../data/tsks";
 
 const TaskContainer = () => {
@@ -10,8 +9,18 @@ const TaskContainer = () => {
 
       <div id="tasks-list">
         {tasks.map((task) => (
-          <div className="task">
-            <input type="checkbox" className="checkbox" checked />
+          <div className="task" key={task.id}>
+            <input
+              type="checkbox"
+              className="checkbox"
+              checked={task.completed}
+            />
+
+            <span>{task.title}</span>
+
+            <button className="delete-button">
+              <i className="fa-solid fa-trash"></i>
+            </button>
           </div>
         ))}
         {/* <!-- Tasks will be added here dynamically --> */}

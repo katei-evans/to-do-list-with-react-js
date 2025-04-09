@@ -1,8 +1,6 @@
-import React from "react";
-
 const AddTaskForm = () => {
   return (
-    <div class="add-task-container">
+    <div className="add-task-container">
       <form id="add-task-form">
         <input
           type="text"
@@ -11,7 +9,7 @@ const AddTaskForm = () => {
           required
         />
         <button type="submit" id="add-task-btn">
-          <i class="fas fa-plus"></i>
+          <i className="fas fa-plus"></i>
         </button>
       </form>
     </div>
